@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Prism.Events;
-using SmartPoker.Core;
+using SmartPoker.Core.ViewModel;
 
 namespace SmartPoker.HandHistory.Local.ViewModel
 {
-		[INotifyPropertyChanged]
+    [INotifyPropertyChanged]
 		public partial class MainContentViewModel :AceViewModel
 		{
 				public MainContentViewModel(IEventAggregator eh) :base(eh) { }

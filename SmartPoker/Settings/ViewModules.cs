@@ -1,10 +1,11 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 using SmartPoker.Core;
+using SmartPoker.Core.View;
 
 namespace SmartPoker.Settings
 {
-		public class ViewModules : IModule
+    public class ViewModules : IModule
 		{
 				public void OnInitialized(IContainerProvider containerProvider)
 				{

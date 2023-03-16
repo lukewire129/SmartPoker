@@ -2,7 +2,7 @@
     x:Class="SmartPoker.Main.MainContent"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:based="clr-namespace:SmartPoker.Core;assembly=SmartPoker.Core"
+    xmlns:based="clr-namespace:SmartPoker.Core.View;assembly=SmartPoker.Core"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:units="clr-namespace:SmartPoker.Main.UI.Units"

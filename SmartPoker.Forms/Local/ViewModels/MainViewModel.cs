@@ -5,6 +5,8 @@ using Prism.Ioc;
 using Prism.Regions;
 using SmartPoker.Core;
 using SmartPoker.Core.Events;
+using SmartPoker.Core.View;
+using SmartPoker.Core.ViewModel;
 using SmartPoker.Forms.Local.Enums;
 using SmartPoker.Forms.Local.Model;
 using System.Collections.Generic;
@@ -12,7 +14,7 @@ using System.Windows.Documents;
 
 namespace SmartPoker.Forms.Local.ViewModels
 {
-		[INotifyPropertyChanged]
+    [INotifyPropertyChanged]
 		public partial class MainViewModel : AceViewModel
 		{
 				[ObservableProperty]
