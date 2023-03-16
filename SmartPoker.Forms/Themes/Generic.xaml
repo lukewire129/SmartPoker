@@ -1,0 +1,6 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/SmartPoker.Forms;component/Themes/Units/ItemsListItem.xaml" />
+        <ResourceDictionary Source="/SmartPoker.Forms;component/Themes/Units/ItemsList.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

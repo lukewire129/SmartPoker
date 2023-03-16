@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="classicmode">클래식 모드</system:String>
+    <system:String x:Key="smartmode">스마트 모드(Beta)</system:String>
+    <system:String x:Key="simplemode">심플 모드(Beta)</system:String>
+    <system:String x:Key="classicmodeexplain">칩으로 플레이어 배팅</system:String>
+    <system:String x:Key="smartmodeexplain">태블릿으로 플레이어 배팅</system:String>
+    <system:String x:Key="simplemodeexplain">플레이어 액션이 없는 모드</system:String>
+</ResourceDictionary>
