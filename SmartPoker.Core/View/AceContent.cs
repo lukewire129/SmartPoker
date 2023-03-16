@@ -1,5 +1,4 @@
-﻿using Jamesnet.Wpf.Controls;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using SmartPoker.Core.MultiLanguage;
 using SmartPoker.Core.ViewModel;
 using System.Collections.Generic;
@@ -11,7 +10,7 @@ using System.Windows.Controls;
 
 namespace SmartPoker.Core.View
 {
-    public class AceContent : ContentControl, IAceViewable
+		public class AceContent : ContentControl, IAceViewable
     {
         public FrameworkElement View { get; init; }
 
@@ -27,7 +26,7 @@ namespace SmartPoker.Core.View
 
             if (dataContext is IViewInitializable vm)
             {
-                vm.OnViewWired(view as IViewable);
+                vm.OnViewWired(view as IAceViewable);
             }
             if (dataContext is IAceViewLoadable && view is FrameworkElement fe)
             {

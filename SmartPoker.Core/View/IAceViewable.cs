@@ -1,9 +1,11 @@
-﻿using Jamesnet.Wpf.Controls;
+﻿using System.Windows;
 
 namespace SmartPoker.Core.View
 {
-    public interface IAceViewable : IViewable
+		public interface IAceViewable
     {
-        void Language(string type);
-    }
+				FrameworkElement View { get; init; }
+				object DataContext => View.DataContext;
+				void Language(string type);
+		}
 }

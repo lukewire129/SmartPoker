@@ -25,7 +25,7 @@ namespace SmartPoker.Core.View
 
             if (dataContext is IViewInitializable vm)
             {
-                vm.OnViewWired(view as IViewable);
+                vm.OnViewWired(view as IAceViewable);
             }
             if (dataContext is IAceViewLoadable && view is FrameworkElement fe)
             {
