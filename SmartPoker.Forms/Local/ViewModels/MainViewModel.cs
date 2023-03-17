@@ -18,17 +18,12 @@ namespace SmartPoker.Forms.Local.ViewModels
 		{
 				[ObservableProperty]
 				private List<ToolItem> _tools = new List<ToolItem> ();
-				private readonly IRegionManager _regionManager;
-				private readonly IContainerExtension _container;
 
 				public MainViewModel(IEventAggregator eh,
 												IRegionManager regionManager,
 												IContainerExtension container)
-						: base (eh)
+						: base (eh,regionManager, container)
 				{
-						this._regionManager = regionManager;
-						this._container = container;
-
 						Tools = new List<ToolItem> ()
 						{
 								new ToolItem(ToolItemType.MAIN, "M"),
@@ -52,22 +47,12 @@ namespace SmartPoker.Forms.Local.ViewModels
 				private void ScreenChange(ToolItem o)
 				{
 						ToolItem item = o;
-
-						IRegion contentRegion = _regionManager.Regions["MainRegion"];
-						IAceViewable currentContent = null;
-
 						if (item.Type == ToolItemType.MAIN)
-								currentContent = _container.Resolve<IAceViewable> (ContentName.MainContent);
+								MoveContent (ContentName.MainContent);
 						else if (item.Type == ToolItemType.HANDHISTORY)
-								currentContent = _container.Resolve<IAceViewable> (ContentName.HandHistoryContent);
+								MoveContent (ContentName.HandHistoryContent);
 						else if (item.Type == ToolItemType.OPTION)
-								currentContent = _container.Resolve<IAceViewable> (ContentName.OptionContent);
-
-						if (!contentRegion.Views.Contains (currentContent))
-						{
-								contentRegion.Add (currentContent);
-						}
-						contentRegion.Activate (currentContent);
+								MoveContent (ContentName.OptionContent);
 				}
 
 				private void LanguageChange(ToolItem o)
